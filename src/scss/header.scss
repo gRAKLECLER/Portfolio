@@ -7,7 +7,7 @@
 
 .header{
   position: absolute;
-  background-color: snow;
+  background-color: rgb(211, 211, 211);
   width: 100vw;
   transition: opacity 0.3s ease;
 
@@ -26,18 +26,29 @@
   }
 
   @include desktop{
-    &__nav{
-        flex-direction: row;
+    &__nav, &__container{
+      flex-direction: row;
       height: 10vh;
     }
   }
 }
+
+@include desktop {
+  .header{
+    position: relative;
+  }
+}
+
 .close{
   position: absolute;
   height: 30px;
   top: 10px;
   right: 10px;
   z-index: 2;
+
+  @include desktop {
+    opacity: 0;
+  }
 }
 
 .hidden{
