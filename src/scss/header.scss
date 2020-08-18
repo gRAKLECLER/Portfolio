@@ -1,6 +1,6 @@
 
-@mixin desktop {
-  @media only screen and(min-width: 1024px){
+@mixin tablet {
+  @media only screen and(min-width: 768px){
     @content;
   }
 }
@@ -9,6 +9,7 @@
   position: absolute;
   background-color: rgb(211, 211, 211);
   width: 100vw;
+  opacity: 0;
   transition: opacity 0.3s ease;
 
   &__container{
@@ -25,7 +26,7 @@
 
   }
 
-  @include desktop{
+  @include tablet{
     &__nav, &__container{
       flex-direction: row;
       height: 10vh;
@@ -33,24 +34,13 @@
   }
 }
 
-@include desktop {
+@include tablet {
   .header{
     position: relative;
-  }
-}
-
-.close{
-  position: absolute;
-  height: 30px;
-  top: 10px;
-  right: 10px;
-  z-index: 2;
-
-  @include desktop {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
 .hidden{
-  opacity: 0;
+  opacity: 1;
 }
