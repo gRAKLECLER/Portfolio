@@ -9,7 +9,7 @@
   position: absolute;
   background-color: rgb(211, 211, 211);
   width: 100vw;
-  opacity: 0;
+  display: none;
   transition: opacity 0.3s ease;
 
   &__container{
@@ -42,5 +42,5 @@
 }
 
 .hidden{
-  opacity: 1;
+  display: block;
 }
