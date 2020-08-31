@@ -3,3 +3,12 @@
 @import './mixin.scss';
 @import '../scss/menuBurger.scss';
 @import '../scss/project.scss';
+
+.mainTitle{
+  z-index: -1;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 2em;
+  font-family: sans-serif;
+  font-weight: 900;
+}
